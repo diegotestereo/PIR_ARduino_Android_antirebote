@@ -1,6 +1,6 @@
 
 const int boton= 3;            // boton conectado al pin 4
-const int tiempoAntirebote =10;
+const int tiempoAntirebote =20;
 
 int cuenta =0;          //Guarda el numero de veces que el boton ha sido presionado
 int estadoBoton;
