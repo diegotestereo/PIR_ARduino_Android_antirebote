@@ -1,6 +1,6 @@
 
 const int boton= 3;            // boton conectado al pin 4
-const int tiempoAntirebote =20;
+const int tiempoAntirebote =15;
 
 int cuenta =0;          //Guarda el numero de veces que el boton ha sido presionado
 int estadoBoton;
@@ -17,7 +17,8 @@ boolean antirebote  (int pin ) {
     if (estado != estadoAnterior ){  // comparamos el estado actual 
       contador = 0;                   // reiniciamos el contador 
       estadoAnterior = estado;
-      Serial.write("2");
+     if(estado){
+      Serial.write("2\r\n");}
     }
     else{
       contador = contador +1;       // aumentamos el contador en 1
